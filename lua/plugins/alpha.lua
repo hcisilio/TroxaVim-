@@ -31,7 +31,7 @@
 		  dashboard.button("f", "   File Browser", ":Telescope find_files <CR>"),
 		  dashboard.button("n", "   New File", ":ene <BAR> startinsert <CR>"),
 		  dashboard.button("p", "   Find Project", ":Telescope projects <CR>"),
-		  dashboard.button("h", "   Recently Files", ":Telescope oldfiles <CR>"),
+		  dashboard.button("r", "   Recently Files", ":Telescope oldfiles <CR>"),
 		  dashboard.button("t", "   Find Text", ":Telescope live_grep <CR>"),
 		  --dashboard.button("u", "   Update Plugins", ":PackerUpdate <CR>"),
 		  --dashboard.button("<leader>ip", "   Add/Remove Plugins", ":e ~/.config/nvim/lua/core/plugins.lua<CR>"),
