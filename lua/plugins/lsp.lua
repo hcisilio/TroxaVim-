@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "jedi_language_server", "pyright" }
+				ensure_installed = { "pylsp" }
 			})
 		end
 	},
@@ -17,8 +17,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			lspconfig.jedi_language_server.setup({})
-			lspconfig.pyright.setup({})
+			lspconfig.pylsp.setup({})
 
 			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 			vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
