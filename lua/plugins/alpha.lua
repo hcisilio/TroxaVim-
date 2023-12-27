@@ -40,7 +40,7 @@
 		}
 
 		local function footer()
-			return "Don't Stop Until You are Proud..."
+			return "Don't stop until this ** crashes"
 		end
 
 		dashboard.section.footer.val = footer()
