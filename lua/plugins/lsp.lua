@@ -19,8 +19,8 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.pylsp.setup({})
 
-			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-			vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+			vim.keymap.set('n', 'lk', vim.diagnostic.goto_prev)
+			vim.keymap.set('n', 'lj', vim.diagnostic.goto_next)
 			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
 			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
