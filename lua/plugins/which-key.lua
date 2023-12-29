@@ -12,9 +12,9 @@ return {
       ["<leader>w"] = { "<cmd>w<cr>", "Save File" },
       ["<leader>W"] = { "<cmd>w<cr>", "Save File" },
       ["<leader>l"] = { name = "+LSP" },
-			["<leader>lk"] = { "<cmd>vim.diagnostic.goto_prev<cr>", "Prev Diagnostic" },
-			["<leader>lj"] = { "<cmd>vim.diagnostic.goto_next<cr>", "Next Diagnostic" },
-			["<leader>lf"] = { "<cmd>vim.lsp.buf.format<cr>", "Format" },
+	  -- ["<leader>lk"] = { "<cmd>vim.diagnostic.goto_prev<cr>", "Prev Diagnostic" },
+	  -- ["<leader>lj"] = { "<cmd>vim.diagnostic.goto_next<cr>", "Next Diagnostic" },
+	  -- ["<leader>lf"] = { "<cmd>vim.lsp.buf.format<cr>", "Format" },
       ["<leader>c"] = { "<cmd>bdelete<cr>", "Close Tab" },
       ["<leader>e"] = { "<cmd>Neotree toggle<CR>", "Explorer"},
     })

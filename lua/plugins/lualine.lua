@@ -3,7 +3,8 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'Onedark'
+        -- theme = 'Onedark'
+        theme = 'lunar'
       },
 	  sections = {
 		lualine_a = {'mode'},
