@@ -16,8 +16,11 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.pylsp.setup({})
+			lspconfig.pylsp.setup({
+				capabilites = capabilities,
+			})
 
 			vim.keymap.set('n', '<leader>lk', vim.diagnostic.goto_prev, {})
 			vim.keymap.set('n', '<leader>lj', vim.diagnostic.goto_next, {})
