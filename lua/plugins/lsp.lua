@@ -15,12 +15,33 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			{
+				"SmiteshP/nvim-navbuddy",
+				dependencies = {
+					"MunifTanjim/nui.nvim",
+					"SmiteshP/nvim-navic",
+				},
+				opts = { lsp = { auto_attach = true } }
+			}
+		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			lspconfig.pylsp.setup({
 				capabilites = capabilities,
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
 			})
+
+			local navic = require("nvim-navic")
+			local navbuddy = require("nvim-navbuddy")
+			require("lspconfig").clangd.setup {
+				on_attach = function(client, bufnr)
+					navbuddy.attach(client, bufnr)
+				end
+			}
 
 			vim.keymap.set('n', '<leader>lk', vim.diagnostic.goto_prev, {})
 			vim.keymap.set('n', '<leader>lj', vim.diagnostic.goto_next, {})
@@ -31,6 +52,7 @@ return {
 			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, {})
 			vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
 			vim.keymap.set({ 'n', 'v' }, '<leader>lf', vim.lsp.buf.format, {})
+			vim.keymap.set('n', '<leader>b', ':Navbuddy<CR>', {})
 		end
 	}
 }
