@@ -11,6 +11,7 @@ return {
       ["<leader>Q"] = { "<cmd>q<cr>", "Close nvim" },
       ["<leader>w"] = { "<cmd>w<cr>", "Save File" },
       ["<leader>W"] = { "<cmd>w<cr>", "Save File" },
+      ["<leader>b"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
       ["<leader>l"] = { name = "+LSP" },
 	  -- ["<leader>lk"] = { "<cmd>vim.diagnostic.goto_prev<cr>", "Prev Diagnostic" },
 	  -- ["<leader>lj"] = { "<cmd>vim.diagnostic.goto_next<cr>", "Next Diagnostic" },
