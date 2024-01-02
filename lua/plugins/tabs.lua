@@ -19,12 +19,9 @@ return {
       }
     }
     -- tabs navigation
-    -- vim.keymap.set('n', '<C-n>', ':BufferLineCycleNext<CR>', {})
-    -- vim.keymap.set('n', '<C-b>', ':BufferLineCyclePrev<CR>', {})
     vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', {})
     vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', {})
-    vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', {})
-    vim.keymap.set('n', '<leader>c', ':bdelete<CR>', {})
+    vim.keymap.set('n', '<leader>c', ':bdelete<CR>', { desc = 'Close Buffer' })
     --
   end
 }
