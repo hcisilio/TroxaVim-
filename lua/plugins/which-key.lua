@@ -5,13 +5,13 @@ return {
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
     local wk = require("which-key")
-    wk.register({
-      ["<leader>q"] = { "<cmd>q<cr>", "Close nvim" },
-      ["<leader>Q"] = { "<cmd>q<cr>", "Close nvim" },
-      ["<leader>w"] = { "<cmd>w<cr>", "Save File" },
-      ["<leader>W"] = { "<cmd>w<cr>", "Save File" },
-      ["<leader>b"] = { "<cmd>Navbuddy<cr>", "Navbuddy" },
-      ["<leader>l"] = { name = "+LSP" },
+    wk.add({
+      {"<leader>q", "<cmd>q<cr>", desc = "Close nvim" },
+      {"<leader>Q", "<cmd>q<cr>", desc = "Close nvim" },
+      {"<leader>w", "<cmd>w<cr>", desc = "Save File" },
+      {"<leader>W", "<cmd>w<cr>", desc = "Save File" },
+      {"<leader>b", "<cmd>Navbuddy<cr>", desc = "Navbuddy" },
+      {"<leader>l", group = "+LSP" },
     })
 	end,
 }
