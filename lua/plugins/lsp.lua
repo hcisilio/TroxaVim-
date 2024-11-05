@@ -38,6 +38,19 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.pylsp.setup({
 				capabilites = capabilities,
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = {
+								maxLineLength = 200,
+							},
+							flake8 = {
+								-- maxLineLength = 200,
+								ignore = {'E501', 'E231'},
+							}
+						}
+					}
+				},
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
 				end
